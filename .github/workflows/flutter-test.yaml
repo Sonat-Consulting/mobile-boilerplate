@@ -23,6 +23,12 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           flutter-version: "3.0.1"
-      - run: flutter pub get
-      - run: flutter analyze
-      - run: flutter test
+
+      - name: Pub Get Packages
+        run: flutter pub get
+
+      - name: Lint the app
+        run: flutter analyze
+
+      - name: Run tests
+        run: flutter test
