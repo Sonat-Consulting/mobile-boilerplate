@@ -34,3 +34,18 @@ To connect to iOS simulator run the simulator installed with XCode see [Installa
 In vscode, in the bottom bar, select device type, and select your android emulator (or create a new one).
 
 Then hit the run button in the menu, on the run and debug tab, and it should start building an android debug application.
+
+
+## Github actions
+
+Github actions is used to run tests and create builds, and eventually create new releases to App store and Google Play.
+
+The ci scripts are located in the `.github/workflows/` folder.
+
+You can use a tool called [`ack`](https://github.com/nektos/act) to run these actions locally.
+
+Docker is used to build and run the actions locally.
+
+1. `brew install ack`
+2. `ack -l` to list actions available
+3. `ack` to run the default "push" event action (run tests).
